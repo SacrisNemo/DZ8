@@ -23,8 +23,6 @@ Student& Student::operator=(const Student& other)
 	return *this;
 }
 
-
-
 Student::~Student()
 {
 
@@ -34,4 +32,12 @@ std::ostream& operator<<(std::ostream& out, const Student& other)
 {
 	out << "Gender = " << other.gender << " \n Average mark = " << other.average_mark << " \n Birth date = " << other.birth_date;
 	return out;
+}
+
+std::istream& operator>> (std::istream& in, Student& other)
+{
+	in >> other.gender;
+	in >> other.average_mark;
+	in >> other.birth_date;
+	return in;
 }

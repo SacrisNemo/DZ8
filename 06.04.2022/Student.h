@@ -14,6 +14,7 @@ public:
 	Student(char, double, std::string);
 	Student& operator= (const Student& other);
 	friend std::ostream& operator<< (std::ostream& out, const Student& other);
+	friend std::istream& operator>> (std::istream& in, Student& other);
 	~Student();
 };
 
